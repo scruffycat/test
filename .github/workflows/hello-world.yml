@@ -1,0 +1,19 @@
+name: Hello World
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  say:
+    runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v2
+
+    - name: Run commands...
+      run: |
+        ls -l
+        echo "Hello World!"
